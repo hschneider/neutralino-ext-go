@@ -92,6 +92,9 @@ func processAppEvent(data neutralino_extension.EventMessage) {
 				out["result"] = fmt.Sprintf("Go says PONG in reply to '%s'", d["parameter"])
 				ext.Send("pingResult", out)
 			}
+
+			// More functions here:
+			...
 		}
 	}
 }
