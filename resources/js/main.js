@@ -28,7 +28,7 @@ Neutralino.events.on("pingResult", onPingResult);
 // Set title
 //
 (async () => {
-    await Neutralino.window.setTitle(`Neutralino RustExtension ${NL_APPVERSION}`);
+    await Neutralino.window.setTitle(`Neutralino GoExtension ${NL_APPVERSION}`);
     await Neutralino.window.show();
 })();
 
