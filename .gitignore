@@ -20,5 +20,8 @@
 # Go workspace file
 go.work
 /extensions/go/go
-/bin
-/dist
+/extensions/go/pkg/
+/bin/
+/dist/
+/bin/
+/extensions/go/pkg/
