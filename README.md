@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://marketmix.com/git-assets/neutralino-ext-go/neutralino-go-header.svg">
+<img src="https://marketmix.com/git-assets/neutralino-ext-go/neutralino-go-header-2.svg">
 </p>
 
 # neutralino-ext-go
