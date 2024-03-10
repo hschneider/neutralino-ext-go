@@ -1,7 +1,7 @@
-
 <p align="center">
-<img src="https://marketmix.com/git-assets/neutralino-ext-rust/neutralino-rust-header.svg">
+<img src="https://marketmix.com/git-assets/neutralino-ext-go/neutralino-go-header.svg">
 </p>
+
 # neutralino-ext-go
 
 **A Go Extension for Neutralino >= 5.0.0**
