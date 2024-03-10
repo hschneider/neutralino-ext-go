@@ -9,6 +9,7 @@ package neutralino_extension
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/google/uuid"
 	"github.com/gorilla/websocket"
 	"io"
 	"net/url"
@@ -16,7 +17,7 @@ import (
 	"os/signal"
 )
 
-const Version = "1.0.3"
+const Version = "1.0.4"
 
 type Config struct {
 	NlPort         string `json:"nlPort"`
@@ -51,7 +52,7 @@ func (wsclient *WSClient) Send(event string, data map[string]interface{}) {
 	// Prep data packet
 	//
 	var msg = DataPacket{}
-	msg.Id = ""
+	msg.Id = uuid.New().String()
 	msg.Method = "app.broadcast"
 	msg.AccessToken = ExtConfig.NlToken
 	msg.Data.Event = event
