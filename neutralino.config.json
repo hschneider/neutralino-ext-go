@@ -1,0 +1,74 @@
+{
+  "$schema": "https://raw.githubusercontent.com/neutralinojs/neutralinojs/main/schemas/neutralino.config.schema.json",
+  "applicationId": "com.marketmix.extGo",
+  "version": "1.0.0",
+  "defaultMode": "window",
+  "port": 0,
+  "documentRoot": "/resources/",
+  "url": "/",
+  "enableServer": true,
+  "enableNativeAPI": true,
+  "enableExtensions": true,
+  "exportAuthInfo": true,
+  "tokenSecurity": "one-time",
+  "logging": {
+    "enabled": false,
+    "writeToLogFile": false
+  },
+  "globalVariables": {},
+  "modes": {
+    "window": {
+      "title": "",
+      "width": 800,
+      "height": 900,
+      "minWidth": 500,
+      "minHeight": 200,
+      "fullScreen": false,
+      "alwaysOnTop": false,
+      "icon": "/resources/icons/appIcon.png",
+      "enableInspector": true,
+      "borderless": false,
+      "maximize": false,
+      "hidden": true,
+      "center": true,
+      "useSavedState": false,
+      "resizable": true,
+      "exitProcessOnClose": false
+    }
+  },
+  "cli": {
+    "binaryName": "ext-rust",
+    "resourcesPath": "/resources/",
+    "extensionsPath": "/extensions/",
+    "clientLibrary": "/resources/js/neutralino.js",
+    "binaryVersion": "5.0.0",
+    "clientVersion": "5.0.0"
+  },
+  "extensions": [
+    {
+      "id": "extGo",
+      "commandDarwin": "${NL_PATH}/extensions/go/go ${NL_PATH}",
+      "commandLinux": "${NL_PATH}/extensions/go/go ${NL_PATH}",
+      "commandWindows": "${NL_PATH}/extensions/go/go.exe ${NL_PATH}"
+    }
+  ],
+  "buildScript": {
+    "mac": {
+      "architecture": [
+        "x64",
+        "arm64"
+      ],
+      "minimumOS": "10.13.0",
+      "appName": "ExtRust",
+      "appBundleName": "ExtGo",
+      "appIdentifier": "com.marketmix.ext-go",
+      "appIcon": "icon.icns"
+    },
+    "win": {
+      "architecture": [
+        "x64"
+      ],
+      "appName": "ExtGo.exe"
+    }
+  }
+}
