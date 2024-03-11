@@ -6,6 +6,8 @@ import (
 	"time"
 )
 
+const extDebug = true
+
 var ext = new(neutralino_extension.WSClient)
 
 func processAppEvent(data neutralino_extension.EventMessage) {
@@ -47,5 +49,5 @@ func longRun() {
 }
 
 func main() {
-	ext.Run(processAppEvent, true)
+	ext.Run(processAppEvent, extDebug)
 }

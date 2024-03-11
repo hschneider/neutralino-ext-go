@@ -17,7 +17,7 @@ import (
 	"os/signal"
 )
 
-const Version = "1.0.4"
+const Version = "1.0.5"
 
 type Config struct {
 	NlPort         string `json:"nlPort"`
@@ -100,10 +100,12 @@ func (wsclient *WSClient) Run(callback func(message EventMessage), debug bool) {
 		}
 	}
 
-	// Listen to keyboard interrupts
+	// Listen to keyboard interrupts when in debug mode
 	//
 	sigInt := make(chan os.Signal, 1)
-	signal.Notify(sigInt, os.Interrupt)
+	if debug {
+		signal.Notify(sigInt, os.Interrupt)
+	}
 
 	// Connect to server
 	//
