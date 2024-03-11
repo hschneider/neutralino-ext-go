@@ -17,7 +17,7 @@ import (
 	"os/signal"
 )
 
-const Version = "1.0.5"
+const Version = "1.0.6"
 
 type Config struct {
 	NlPort         string `json:"nlPort"`
@@ -168,7 +168,6 @@ func (wsclient *WSClient) Run(callback func(message EventMessage), debug bool) {
 			wsclient.quit()
 		}
 	}
-	return
 }
 
 // IsEvent : Return true, if data matches event-name
@@ -184,5 +183,8 @@ func (wsclient *WSClient) quit() {
 	var pid = os.Getpid()
 	fmt.Println("Killing own process with PID ", pid)
 	process, _ := os.FindProcess(pid)
-	process.Signal(os.Kill)
+	err := process.Signal(os.Kill)
+	if err != nil {
+		return
+	}
 }
