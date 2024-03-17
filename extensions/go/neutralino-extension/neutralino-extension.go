@@ -178,7 +178,7 @@ func (wsclient *WSClient) IsEvent(data EventMessage, event string) bool {
 	return false
 }
 
-// quit: Make Harakiri
+// quit: Do Harakiri
 func (wsclient *WSClient) quit() {
 	var pid = os.Getpid()
 	fmt.Println("Killing own process with PID ", pid)
