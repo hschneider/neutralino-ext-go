@@ -49,7 +49,7 @@
       "id": "extGo",
       "commandDarwin": "${NL_PATH}/extensions/go/go ${NL_PATH}",
       "commandLinux": "${NL_PATH}/extensions/go/go ${NL_PATH}",
-      "commandWindows": "${NL_PATH}/extensions/go/go.exe ${NL_PATH}"
+      "commandWindows": "${NL_PATH}\\extensions\\go\\go.exe ${NL_PATH}"
     }
   ],
   "buildScript": {
