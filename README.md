@@ -111,7 +111,7 @@ The extension is activated in main().
 **processAppEvent** is a callback function, which is triggered with each event coming from the Neutralino app.
 
 In the callback function, you can process the incoming events by their name. In this case we react to the **"runGo"** event.
-**d["function"]** holds the requested Rust-function and **d["parameter"]** its data payload as map derived from JSON.
+**d["function"]** holds the requested Go-function and **d["parameter"]** its data payload as map derived from JSON.
 
 If the requested function is named **ping**, we send back a message to the Neutralino frontend. 
 

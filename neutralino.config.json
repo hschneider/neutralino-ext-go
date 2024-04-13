@@ -37,7 +37,7 @@
     }
   },
   "cli": {
-    "binaryName": "ext-rust",
+    "binaryName": "ext-go",
     "resourcesPath": "/resources/",
     "extensionsPath": "/extensions/",
     "clientLibrary": "/resources/js/neutralino.js",
@@ -59,7 +59,7 @@
         "arm64"
       ],
       "minimumOS": "10.13.0",
-      "appName": "ExtRust",
+      "appName": "ExtGo",
       "appBundleName": "ExtGo",
       "appIdentifier": "com.marketmix.ext-go",
       "appIcon": "icon.icns"
