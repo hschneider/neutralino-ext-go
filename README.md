@@ -59,14 +59,22 @@ Follow these steps:
 
 Make sure that **neutralino.config.json** contains this, adapted to your environment:
 ```json
-  "extensions": [
-    {
-      "id": "extGo",
-      "commandDarwin": "${NL_PATH}/extensions/go/go ${NL_PATH}",
-      "commandLinux": "${NL_PATH}/extensions/go/go ${NL_PATH}",
-      "commandWindows": "${NL_PATH}/extensions/go/go.exe ${NL_PATH}"
-    }
-  ],
+"nativeAllowList": [
+  "app.*",
+  "os.*",
+  "window.*",
+  "events.*",
+  "extensions.*",
+  "debug.log"
+],
+"extensions": [
+{
+"id": "extGo",
+"commandDarwin": "${NL_PATH}/extensions/go/go ${NL_PATH}",
+"commandLinux": "${NL_PATH}/extensions/go/go ${NL_PATH}",
+"commandWindows": "${NL_PATH}/extensions/go/go.exe ${NL_PATH}"
+}
+],
 ```
 
 ## ./extensions/go/main.go explained
