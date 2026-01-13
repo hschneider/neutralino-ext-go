@@ -26,3 +26,4 @@ go.work
 /bin/
 /extensions/go/pkg/
 /.idea
+.tmp/auth_info.json
